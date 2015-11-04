@@ -64,7 +64,7 @@ function builtFilesExist() {
     }
 
     function checkExist(fileName) {
-        var errorMessage = 'Javascript files have not been built.',
+        var errorMessage = 'Javascript files have not been built. ' + fileName ,
             errorHelp = '\nPlease read the getting started instructions at:' +
                         '\nhttps://github.com/TryGhost/Ghost#getting-started';
 

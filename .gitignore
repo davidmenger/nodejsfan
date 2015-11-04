@@ -46,7 +46,7 @@ Session.vim
 /content/tmp/*
 /content/data/*
 /content/apps/**/*
-/content/themes/**/*
+# /content/themes/**/*
 /content/images/**/*
 !/content/themes/casper/**
 !/README.md
@@ -58,7 +58,7 @@ CHANGELOG.md
 /core/test/functional/*.png
 /core/test/coverage
 
-config.js
+# config.js
 /core/client/config.js
 !/core/client/app/mirage/config.js
 !/core/client/app/services/config.js

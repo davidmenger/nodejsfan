@@ -6,8 +6,8 @@ docs/**
 _site/**
 content/images/**
 !content/images/README.md
-content/themes/**
-!content/themes/casper/**
+# content/themes/**
+# !content/themes/casper/**
 content/apps/**
 !content/apps/README.md
 content/data/**
