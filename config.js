@@ -11,19 +11,22 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://my-ghost-blog.com',
+        url: 'http://nodejsfan-damejs.rhcloud.com',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
+                host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
+                user     : process.env.OPENSHIFT_<database>_DB_USERNAME,
+                password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
+                database : 'ghost',
+                charset  : 'utf8'
+            }
         },
 
         server: {
-            host: '127.0.0.1',
-            port: '2368'
+            host: process.env.OPENSHIFT_NODEJS_IP,
+            port: process.env.OPENSHIFT_NODEJS_PORT
         }
     },
 
